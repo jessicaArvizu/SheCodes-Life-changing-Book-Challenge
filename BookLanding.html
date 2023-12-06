@@ -23,62 +23,22 @@
         */
 
         * {
-            background-color: #471A1B;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
+            background-color: #471A1B;
             width: 100%;
             font-family: 'Fauna One', serif;
-        }
-
-        .section {
-            width: 100%;
-            padding: 70px;
-        }
-
-        .main {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .book-show {
-            background-color: #BF4A38;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1190%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c536.277C100.475%2c536.031%2c186.465%2c475.614%2c274.267%2c426.767C367.962%2c374.642%2c472.096%2c332.392%2c529.386%2c241.763C590.286%2c145.423%2c612.802%2c27.023%2c598.431%2c-86.041C583.934%2c-200.093%2c517.992%2c-297.114%2c449.184%2c-389.22C375.754%2c-487.512%2c304.072%2c-600.15%2c186.982%2c-636.802C69.364%2c-673.619%2c-62.876%2c-642.019%2c-171.317%2c-583.452C-269.757%2c-530.287%2c-320.027%2c-423.928%2c-380.935%2c-330.082C-433.764%2c-248.685%2c-481.502%2c-166.943%2c-503.049%2c-72.327C-526.08%2c28.805%2c-552.038%2c138.083%2c-509.048%2c232.475C-466.046%2c326.894%2c-364.221%2c374.944%2c-275.131%2c428.113C-188.763%2c479.658%2c-100.58%2c536.523%2c0%2c536.277' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 1272.163C1564.537 1259.1860000000001 1666.446 1179.9450000000002 1765.761 1105.337 1858.724 1035.501 1944.274 957.521 1997.4679999999998 854.131 2052.41 747.343 2101.064 625.848 2072.467 509.209 2044.524 395.235 1923.632 337.041 1848.576 246.834 1771.525 154.22899999999998 1741.1970000000001 5.211999999999989 1625.42-28.077999999999975 1509.596-61.38099999999997 1400.37 37.51400000000001 1290.155 86.269 1194.656 128.515 1094.2359999999999 161.41699999999997 1023.466 238.20499999999998 951.392 316.407 922.992 419.725 889.732 520.74 849.683 642.376 775.659 764.914 809.37 888.456 844.248 1016.274 955.983 1109.718 1069.217 1178.5059999999999 1180.699 1246.23 1311.273 1285.79 1441 1272.163' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1190'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");            overflow: hidden;
-            padding: 20px;
-            border-radius: 20px;
-            display: flex;
-        }
-
-        .book-show-left,
-        .book-show-right {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .book-show-left {
-            padding: 2%;
-        }
-
-
-        h1,
-        h2,
-        h3,
-        .book-show-call-to-action,
-        .book-show-left,
-        .book-show-right {
-            background-color: transparent;
+            padding: 3%;
         }
 
         h1 {
             font-family: 'Cinzel', serif;
             font-size: 73px;
-            color: #D5BCA4;
+            color: #FDF1DB;
         }
 
         h2 {
@@ -87,54 +47,230 @@
         }
 
         h3 {
-            color: #FDF1DB;
+            color: #D5BCA4;
+            margin: 30px 0;
         }
 
         button {
             border: none;
             cursor: pointer;
-            background-color: #471A1B;
-            color: #FDF1DB;
             border-radius: 30px;
             font-size: 20px;
             font-weight: bold;
             width: 100%;
             padding: 20px 10px 20px 10px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+            transition: all 300ms ease-in-out;
         }
 
-        button:hover {
+        .section {
+            width: 100%;
+            padding: 50px;
+            justify-content: center;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Book showcase */
+        .book-show {
+            background-color: #BF4A38;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1190%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c536.277C100.475%2c536.031%2c186.465%2c475.614%2c274.267%2c426.767C367.962%2c374.642%2c472.096%2c332.392%2c529.386%2c241.763C590.286%2c145.423%2c612.802%2c27.023%2c598.431%2c-86.041C583.934%2c-200.093%2c517.992%2c-297.114%2c449.184%2c-389.22C375.754%2c-487.512%2c304.072%2c-600.15%2c186.982%2c-636.802C69.364%2c-673.619%2c-62.876%2c-642.019%2c-171.317%2c-583.452C-269.757%2c-530.287%2c-320.027%2c-423.928%2c-380.935%2c-330.082C-433.764%2c-248.685%2c-481.502%2c-166.943%2c-503.049%2c-72.327C-526.08%2c28.805%2c-552.038%2c138.083%2c-509.048%2c232.475C-466.046%2c326.894%2c-364.221%2c374.944%2c-275.131%2c428.113C-188.763%2c479.658%2c-100.58%2c536.523%2c0%2c536.277' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 1272.163C1564.537 1259.1860000000001 1666.446 1179.9450000000002 1765.761 1105.337 1858.724 1035.501 1944.274 957.521 1997.4679999999998 854.131 2052.41 747.343 2101.064 625.848 2072.467 509.209 2044.524 395.235 1923.632 337.041 1848.576 246.834 1771.525 154.22899999999998 1741.1970000000001 5.211999999999989 1625.42-28.077999999999975 1509.596-61.38099999999997 1400.37 37.51400000000001 1290.155 86.269 1194.656 128.515 1094.2359999999999 161.41699999999997 1023.466 238.20499999999998 951.392 316.407 922.992 419.725 889.732 520.74 849.683 642.376 775.659 764.914 809.37 888.456 844.248 1016.274 955.983 1109.718 1069.217 1178.5059999999999 1180.699 1246.23 1311.273 1285.79 1441 1272.163' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1190'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .book-show-left {
+            padding: 2%;
+        }
+
+        .button-call-to-action {
+            background-color: #471A1B;
+            color: #D5BCA4;
+        }
+
+        .button-call-to-action:hover {
             background-color: #D5BCA4;
             color: #BC2224;
-            transition: all 300ms ease-in-out;
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
         }
 
+        /* Love section */
+        .why-i-love {
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .book-show-left,
+        .book-show-right,
+        .love-left,
+        .love-right,
+        .love-left,
+        .love-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .love-right {
+            background-color: #BF4A38;
+            border-radius: 20px;
+            padding: 5%;
+        }
+
+        .title-love {
+            font-family: 'Cinzel', serif;
+            color: #FDF1DB;
+            font-size: 30px;
+            margin-bottom: 40px;
+            font-weight: bolder;
+        }
+
+        /* About section*/
+        .book-about {
+            background-color: #FDF1DB;
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 20px;
+            padding: 5%;
+        }
+
+        .title-about {
+            font-family: 'Cinzel', serif;
+            color: #BF4A38;
+            font-size: 30px;
+            margin-bottom: 40px;
+            font-weight: bolder;
+        }
+
+        .text-about,
+        .text-love {
+            color: #471A1B;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Ratings section */
         .book-ratings {
             display: grid;
-        }
-
-        .credits {
-            font-family: 'Roboto Condensed', sans-serif;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
 
         .card {
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
+            width: 100%;
+            height: 300px;
+            border-radius: 30px;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='500' height='300' preserveAspectRatio='none' viewBox='0 0 500 300'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1064%26quot%3b)' fill='none'%3e%3crect width='500' height='300' x='0' y='0' fill='rgba(213%2c 188%2c 164%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c138 C 33.4%2c114.2 100.2%2c24.2 167%2c19 C 233.8%2c13.8 267.4%2c112.2 334%2c112 C 400.6%2c111.8 466.8%2c36.8 500%2c18L500 300L0 300z' fill='rgba(253%2c 241%2c 219%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c253 C 50%2c242.4 150%2c194 250%2c200 C 350%2c206 450%2c266.4 500%2c283L500 300L0 300z' fill='rgba(225%2c 214%2c 194%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1064'%3e%3crect width='500' height='300' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5%;
+        }
+
+        .button-card {
+            background-color: #831719;
+            color: #FDF1DB;
+        }
+
+        .button-card:hover {
+            background-color: #681214;
+            color: #FDF1DB;
+        }
+
+        .rating {
+            font-family: 'Cinzel', serif;
+            color: #BC2224;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .rating-subtext {
+            color: #471A1B;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .rating-link {
+            margin-top: 30px;
+            text-decoration: none;
+            color: #D5BCA4;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* About Author section */
+        .about-author {
+            background-color: #BF4A38;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c582.507C107.497%2c577.258%2c171.634%2c462.167%2c248.806%2c387.149C311.304%2c326.395%2c359.39%2c258.738%2c407.698%2c186.189C465.64%2c99.173%2c570.421%2c23.495%2c560.234%2c-80.549C550.089%2c-184.163%2c432.56%2c-237.402%2c359.008%2c-311.082C291.152%2c-379.057%2c240.662%2c-482.123%2c145.608%2c-495.897C50.588%2c-509.666%2c-26.957%2c-425.015%2c-111.356%2c-379.243C-177.662%2c-343.283%2c-245.42%2c-312.445%2c-295.938%2c-256.432C-347.196%2c-199.598%2c-375.397%2c-129.704%2c-401.35%2c-57.705C-433.353%2c31.08%2c-491.212%2c121.678%2c-464.901%2c212.313C-438.08%2c304.704%2c-340.187%2c352.306%2c-264.927%2c412.234C-181.108%2c478.977%2c-107.018%2c587.733%2c0%2c582.507' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 986.802C1512.886 970.309 1581.636 954.371 1647.806 921.796 1721.772 885.383 1814.464 861.1890000000001 1848.598 786.144 1882.73 711.104 1837.142 626.059 1818.885 545.668 1802.13 471.892 1782.114 402.113 1746.254 335.496 1701.601 252.54399999999998 1667.7930000000001 154.99900000000002 1584.696 110.61500000000001 1496.73 63.63099999999997 1386.357 60.325000000000045 1292.1100000000001 92.928 1199.547 124.94900000000001 1137.158 207.43900000000002 1078.362 285.773 1022.967 359.576 977.717 440.174 963.085 531.2860000000001 948.293 623.392 960.732 716.905 995.2049999999999 803.588 1030.926 893.408 1073.252 996.364 1162.658 1033.108 1251.451 1069.601 1347.431 1008.27 1441 986.802' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+            overflow: hidden;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .title-author {
+            font-family: 'Cinzel', serif;
+            color: #D5BCA4;
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-weight: bolder;
+        }
+
+        .text-author {
+            font-size: 20px;
+            color: #FDF1DB;
+        }
+
+        .author-left,
+        .author-right {
+            padding: 5%;
+        }
+
+        .img-author {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        a {
+            color: #471A1B;
+            font-weight: bolder;
+        }
+
+        a:hover {
+            color:#831719;
+        }
+
+        /* Credits section */
+        .credits {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #FDF1DB;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <section class="section show-section">
+        <section class="section">
             <div class="book-show">
                 <div class="book-show-left">
                     <h1>Crescent City: </h1><br>
                     <h2>House of earth and blood.</h2><br>
                     <h3> Winner of the goodreads choice awards 2020!</h3><br>
-                    <div class="book-show-call-to-action">
-                        <button> Learn more 👋🏻 </button>
-                    </div>
+                    <button class="button-call-to-action"> Want to learn more? 🙌🏻 ✨</button>
                 </div>
                 <div class="book-show-right">
                     <img alt="Crescent City Book"
@@ -144,63 +280,127 @@
             </div>
         </section>
 
-        <section class="section about-section">
+        <section id="about-section" class="section">
             <div class="book-about">
-                <p>Are you passionate about romance and suspense books? This book is for you!</p>
-                <p>Featuring memorable characters, passionate romance, and gripping suspense, this imaginative new
-                    fantasy
-                    series from bestselling author Sarah J. Maas explores the pain of loss, the cost of freedom, and the
-                    transformative force of love.</p>
+                <p class="title-about">Are you passionate about romance and suspense books? This book is for you!</p>
+                <p class="text-about">
+                    Bryce Quinlan had the perfect life-working hard all day and partying all night-until a demon
+                    murdered her closest friends, leaving her bereft, wounded, and alone. When the accused is behind
+                    bars but the crimes start up again, Bryce finds herself at the heart of the investigation. She'll do
+                    whatever it takes to avenge their deaths.
+                </p>
+                <p class="text-about">
+                    Hunt Athalar is a notorious Fallen angel, now enslaved to the Archangels he once attempted to
+                    overthrow. His brutal skills and incredible strength have been set to one purpose-to assassinate his
+                    boss's enemies, no questions asked. But with a demon wreaking havoc in the city, he's offered an
+                    irresistible deal: help Bryce find the murderer, and his freedom will be within reach.
+                </p>
+                <p class="text-about">
+                    As Bryce and Hunt dig deep into Crescent City's underbelly, they discover a dark power that
+                    threatens everything and everyone they hold dear, and they find, in each other, a blazing
+                    passion-one that could set them both free, if they'd only let it.
+                </p>
+                <p class="text-about">
+                    With unforgettable characters, sizzling romance, and page-turning suspense, this richly inventive
+                    new fantasy series by #1 New York Times bestselling author Sarah J. Maas delves into the heartache
+                    of loss, the price of freedom-and the power of love.
+                </p>
             </div>
         </section>
 
-        <section class="section ratings-section">
+        <section class="section love">
+            <div class="why-i-love">
+                <div class="love-left">
+                    <img alt="Crescent City Book" width="300px"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/154/original/9781639733286_p1_v2_s600x595.jpg?1701881939">
+                </div>
+                <div class="love-right">
+                    <p class="title-love"> Why do I love this book?</p>
+                    <p class="text-love">
+                        In a tough chapter of my life, this book found me. I was often feeling low, wasting tons of time
+                        on
+                        social media to distract myself. Back when I was younger, I loved reading — I even was part of
+                        book
+                        clubs, shared stories with others, and read with my friends. But that changed when I moved
+                        cities,
+                        started college, got a new job, and I got busy with many different stuff. Life started to get
+                        more complicated.
+                    </p>
+                    <p class="text-love">
+                        I stopped reading altogether. Then this book came along, and it changed everything. It brought
+                        back the feeling of reading, so much so that I've read 25 books this year!
+                    </p>
+
+                    <p class="text-love">
+                        It made me cry, it made me laugh, and, most importantly, it made me fall in love with books all
+                        over again.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
             <div class="book-ratings">
                 <div class="card">
-                    <p> 4.48 ⭐️ on GoodReads!</p>
-                    <a
+                    <p class="rating"> 4.48 ⭐️ </p>
+                    <p class="rating-subtext">on GoodReads!</p>
+                    <a class="rating-link"
                         href="https://www.goodreads.com/book/show/44778083-house-of-earth-and-blood?from_search=true&from_srp=true&qid=kbQ1vnBMmm&rank=1">
                         Visit GoodReads
                     </a>
+                    <button class="button-card"> Visit GoodReads</button>
                 </div>
                 <div class="card">
-                    <p>4.31 ⭐️ on LibraryThing!</p>
-                    <a href="https://www.librarything.com/work/18366491">Visit LibraryThing</a>
+                    <p class="rating"> 4.31 ⭐️ </p>
+                    <p class="rating-subtext">on LibraryThing!</p>
+                    <a class="rating-link" href="https://www.librarything.com/work/18366491">Visit </a>
+                    <button class="button-card"> Visit LibraryThing</button>
                 </div>
                 <div class="card">
-                    <p>4.7 ⭐️ on Amazon!</p>
-                    <a
+                    <p class="rating"> 4.7 ⭐️ </p>
+                    <p class="rating-subtext">on Amazon!</p>
+                    <a class="rating-link"
                         href="https://www.amazon.com.mx/House-Earth-Blood-Crescent-City/dp/1635574048/ref=sr_1_1?crid=T36DPHADXCXW&keywords=crescent+city&qid=1701820304&sprefix=crescent+city%2Caps%2C376&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47">Visit
                         Amazon</a>
+                    <button class="button-card">Visit Amazon</button>
                 </div>
             </div>
         </section>
 
         <section class="section author-section">
             <div class="about-author">
-                <p>
-                    Sarah J. Maas is the #1 New York Times and internationally bestselling author of the Crescent City,
-                    A
-                    Court
-                    of Thorns and Roses, and the Throne of Glass series. Her books have sold more than twelve million
-                    copies
-                    and
-                    are published in thirty-seven languages. A New York native, Sarah lives in Philadelphia with her
-                    husband,
-                    son, and dog.
-                </p>
-                <p>
-                    To find out more, visit <a href="https://sarahjmaas.com/">sarahjmaas.com</a> or follow <a
-                        href="https://www.instagram.com/therealsjmaas/">@therealsjmaas</a> on Instagram.
-                </p>
-                <img class="img-author" alt="Image of author Sarah J. Maas"
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/113/original/Sarah-headshot-color-med.jpg?1701819528">
+                <div class="author-left">
+                    <p class="title-author">
+                        Who is the author?
+                    </p>
+                    <p class="text-author">
+                        Sarah J. Maas is the #1 New York Times and internationally bestselling author of the Crescent
+                        City, A Court of Thorns and Roses, and the Throne of Glass series.
+                    </p>
+                    <br>
+                    <p class="text-author">
+                        Her books have sold more than twelve million copies and are published in thirty-seven languages.
+                        A New York native, Sarah lives in Philadelphia with her husband, son, and dog.
+                    </p>
+                    <br>
+                    <p class="text-author">
+                        To find out more, visit <a href="https://sarahjmaas.com/">sarahjmaas.com</a> or follow <a
+                            href="https://www.instagram.com/therealsjmaas/">@therealsjmaas</a> on Instagram.
+                    </p>
+                </div>
+                <div class="author-right">
+                    <img class="img-author" alt="Image of author Sarah J. Maas"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/113/original/Sarah-headshot-color-med.jpg?1701819528">
+
+                </div>
             </div>
         </section>
 
-        <div class="credits">
-            Coded by Jessica Arvizu, with 🧡. Using HTML, CSS & JavaScript
-        </div>
+        <section class="section credtis-section">
+            <div class="credits">
+                Coded by Jessica Arvizu, with 🧡. Using HTML, CSS & JavaScript
+            </div>
+        </section>
     </div>
 </body>
 
