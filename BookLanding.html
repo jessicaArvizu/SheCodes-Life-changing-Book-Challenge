@@ -84,8 +84,14 @@
             display: flex;
         }
 
+        .book-show img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .book-show-left {
             padding: 2%;
+            width: 100%;
         }
 
         .button-call-to-action {
@@ -181,6 +187,7 @@
         .button-card {
             background-color: #831719;
             color: #FDF1DB;
+            margin-top: 40px;
         }
 
         .button-card:hover {
@@ -211,6 +218,10 @@
         }
 
         /* About Author section */
+        .author-section {
+            flex-direction: column-reverse;
+        }
+
         .about-author {
             background-color: #BF4A38;
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c582.507C107.497%2c577.258%2c171.634%2c462.167%2c248.806%2c387.149C311.304%2c326.395%2c359.39%2c258.738%2c407.698%2c186.189C465.64%2c99.173%2c570.421%2c23.495%2c560.234%2c-80.549C550.089%2c-184.163%2c432.56%2c-237.402%2c359.008%2c-311.082C291.152%2c-379.057%2c240.662%2c-482.123%2c145.608%2c-495.897C50.588%2c-509.666%2c-26.957%2c-425.015%2c-111.356%2c-379.243C-177.662%2c-343.283%2c-245.42%2c-312.445%2c-295.938%2c-256.432C-347.196%2c-199.598%2c-375.397%2c-129.704%2c-401.35%2c-57.705C-433.353%2c31.08%2c-491.212%2c121.678%2c-464.901%2c212.313C-438.08%2c304.704%2c-340.187%2c352.306%2c-264.927%2c412.234C-181.108%2c478.977%2c-107.018%2c587.733%2c0%2c582.507' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 986.802C1512.886 970.309 1581.636 954.371 1647.806 921.796 1721.772 885.383 1814.464 861.1890000000001 1848.598 786.144 1882.73 711.104 1837.142 626.059 1818.885 545.668 1802.13 471.892 1782.114 402.113 1746.254 335.496 1701.601 252.54399999999998 1667.7930000000001 154.99900000000002 1584.696 110.61500000000001 1496.73 63.63099999999997 1386.357 60.325000000000045 1292.1100000000001 92.928 1199.547 124.94900000000001 1137.158 207.43900000000002 1078.362 285.773 1022.967 359.576 977.717 440.174 963.085 531.2860000000001 948.293 623.392 960.732 716.905 995.2049999999999 803.588 1030.926 893.408 1073.252 996.364 1162.658 1033.108 1251.451 1069.601 1347.431 1008.27 1441 986.802' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
@@ -239,8 +250,9 @@
         }
 
         .img-author {
-            width: 250px;
+            width: 100%;
             height: auto;
+            /* Maintain aspect ratio */
             border-radius: 50%;
         }
 
@@ -250,7 +262,7 @@
         }
 
         a:hover {
-            color:#831719;
+            color: #831719;
         }
 
         /* Credits section */
@@ -344,25 +356,17 @@
                 <div class="card">
                     <p class="rating"> 4.48 ⭐️ </p>
                     <p class="rating-subtext">on GoodReads!</p>
-                    <a class="rating-link"
-                        href="https://www.goodreads.com/book/show/44778083-house-of-earth-and-blood?from_search=true&from_srp=true&qid=kbQ1vnBMmm&rank=1">
-                        Visit GoodReads
-                    </a>
-                    <button class="button-card"> Visit GoodReads</button>
+                    <button id="goodreads" class="button-card"> Visit GoodReads</button>
                 </div>
                 <div class="card">
                     <p class="rating"> 4.31 ⭐️ </p>
                     <p class="rating-subtext">on LibraryThing!</p>
-                    <a class="rating-link" href="https://www.librarything.com/work/18366491">Visit </a>
-                    <button class="button-card"> Visit LibraryThing</button>
+                    <button id="library-thing" class="button-card"> Visit LibraryThing</button>
                 </div>
                 <div class="card">
                     <p class="rating"> 4.7 ⭐️ </p>
                     <p class="rating-subtext">on Amazon!</p>
-                    <a class="rating-link"
-                        href="https://www.amazon.com.mx/House-Earth-Blood-Crescent-City/dp/1635574048/ref=sr_1_1?crid=T36DPHADXCXW&keywords=crescent+city&qid=1701820304&sprefix=crescent+city%2Caps%2C376&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47">Visit
-                        Amazon</a>
-                    <button class="button-card">Visit Amazon</button>
+                    <button id="amazon" class="button-card">Visit Amazon</button>
                 </div>
             </div>
         </section>
@@ -403,5 +407,32 @@
         </section>
     </div>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var button = document.querySelector(".button-call-to-action");
+        var aboutSection = document.getElementById("about-section");
+
+        button.addEventListener("click", function () {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+
+        var goodreadsButton = document.querySelector("#goodreads");
+        goodreadsButton.addEventListener("click", function () {
+            window.open("https://www.goodreads.com/book/show/44778083-house-of-earth-and-blood?from_search=true&from_srp=true&qid=kbQ1vnBMmm&rank=1", "_blank");
+        });
+
+        var librarythingButton = document.querySelector("#library-thing");
+        librarythingButton.addEventListener("click", function () {
+            window.open("https://www.librarything.com/work/18366491", "_blank");
+        });
+
+        var amazonButton = document.querySelector("#amazon");
+        amazonButton.addEventListener("click", function () {
+            window.open("https://www.amazon.com.mx/House-Earth-Blood-Crescent-City/dp/1635574048/ref=sr_1_1?crid=T36DPHADXCXW&keywords=crescent+city&qid=1701820304&sprefix=crescent+city%2Caps%2C376&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47", "_blank");
+        });
+    });
+</script>
+
 
 </html>
