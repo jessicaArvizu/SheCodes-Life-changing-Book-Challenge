@@ -11,6 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Fauna+One&family=Roboto+Condensed:wght@300&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <style>
         /*
             Color palette
@@ -21,7 +26,6 @@
             Dun: #D5BCA4
             Papaya Whip: #FDF1DB
         */
-
         * {
             margin: 0;
             padding: 0;
@@ -30,10 +34,9 @@
 
         body {
             background-color: #471A1B;
-            width: 100%;
             font-family: 'Fauna One', serif;
-            padding: 3%;
         }
+
 
         h1 {
             font-family: 'Cinzel', serif;
@@ -54,49 +57,49 @@
         button {
             border: none;
             cursor: pointer;
-            border-radius: 30px;
             font-size: 20px;
             font-weight: bold;
             width: 100%;
-            padding: 20px 10px 20px 10px;
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
             transition: all 300ms ease-in-out;
         }
 
-        .section {
-            width: 100%;
-            padding: 50px;
-            justify-content: center;
+        a {
+            color: #471A1B;
+            font-weight: bolder;
         }
 
-        .main {
-            display: flex;
-            flex-wrap: wrap;
+        a:hover {
+            color: #831719;
         }
 
-        /* Book showcase */
-        .book-show {
+        .love-section,
+        .about-section,
+        .author-section,
+        .ratings-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 5%;
+        }
+
+        .credits-section {
+            margin-bottom: 20px;
+        }
+
+        .showcase-section {
+            margin-top: 70px;
+            margin-bottom: 70px;
             background-color: #BF4A38;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1190%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c536.277C100.475%2c536.031%2c186.465%2c475.614%2c274.267%2c426.767C367.962%2c374.642%2c472.096%2c332.392%2c529.386%2c241.763C590.286%2c145.423%2c612.802%2c27.023%2c598.431%2c-86.041C583.934%2c-200.093%2c517.992%2c-297.114%2c449.184%2c-389.22C375.754%2c-487.512%2c304.072%2c-600.15%2c186.982%2c-636.802C69.364%2c-673.619%2c-62.876%2c-642.019%2c-171.317%2c-583.452C-269.757%2c-530.287%2c-320.027%2c-423.928%2c-380.935%2c-330.082C-433.764%2c-248.685%2c-481.502%2c-166.943%2c-503.049%2c-72.327C-526.08%2c28.805%2c-552.038%2c138.083%2c-509.048%2c232.475C-466.046%2c326.894%2c-364.221%2c374.944%2c-275.131%2c428.113C-188.763%2c479.658%2c-100.58%2c536.523%2c0%2c536.277' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 1272.163C1564.537 1259.1860000000001 1666.446 1179.9450000000002 1765.761 1105.337 1858.724 1035.501 1944.274 957.521 1997.4679999999998 854.131 2052.41 747.343 2101.064 625.848 2072.467 509.209 2044.524 395.235 1923.632 337.041 1848.576 246.834 1771.525 154.22899999999998 1741.1970000000001 5.211999999999989 1625.42-28.077999999999975 1509.596-61.38099999999997 1400.37 37.51400000000001 1290.155 86.269 1194.656 128.515 1094.2359999999999 161.41699999999997 1023.466 238.20499999999998 951.392 316.407 922.992 419.725 889.732 520.74 849.683 642.376 775.659 764.914 809.37 888.456 844.248 1016.274 955.983 1109.718 1069.217 1178.5059999999999 1180.699 1246.23 1311.273 1285.79 1441 1272.163' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1190'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='1320' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1190%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c536.277C100.475%2c536.031%2c186.465%2c475.614%2c274.267%2c426.767C367.962%2c374.642%2c472.096%2c332.392%2c529.386%2c241.763C590.286%2c145.423%2c612.802%2c27.023%2c598.431%2c-86.041C583.934%2c-200.093%2c517.992%2c-297.114%2c449.184%2c-389.22C375.754%2c-487.512%2c304.072%2c-600.15%2c186.982%2c-636.802C69.364%2c-673.619%2c-62.876%2c-642.019%2c-171.317%2c-583.452C-269.757%2c-530.287%2c-320.027%2c-423.928%2c-380.935%2c-330.082C-433.764%2c-248.685%2c-481.502%2c-166.943%2c-503.049%2c-72.327C-526.08%2c28.805%2c-552.038%2c138.083%2c-509.048%2c232.475C-466.046%2c326.894%2c-364.221%2c374.944%2c-275.131%2c428.113C-188.763%2c479.658%2c-100.58%2c536.523%2c0%2c536.277' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 1272.163C1564.537 1259.1860000000001 1666.446 1179.9450000000002 1765.761 1105.337 1858.724 1035.501 1944.274 957.521 1997.4679999999998 854.131 2052.41 747.343 2101.064 625.848 2072.467 509.209 2044.524 395.235 1923.632 337.041 1848.576 246.834 1771.525 154.22899999999998 1741.1970000000001 5.211999999999989 1625.42-28.077999999999975 1509.596-61.38099999999997 1400.37 37.51400000000001 1290.155 86.269 1194.656 128.515 1094.2359999999999 161.41699999999997 1023.466 238.20499999999998 951.392 316.407 922.992 419.725 889.732 520.74 849.683 642.376 775.659 764.914 809.37 888.456 844.248 1016.274 955.983 1109.718 1069.217 1178.5059999999999 1180.699 1246.23 1311.273 1285.79 1441 1272.163' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1190'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
             overflow: hidden;
-            padding: 20px;
             border-radius: 20px;
-            display: flex;
-        }
-
-        .book-show img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .book-show-left {
-            padding: 2%;
-            width: 100%;
+            padding: 3%;
         }
 
         .button-call-to-action {
             background-color: #471A1B;
             color: #D5BCA4;
+            padding: 20px 10px 20px 10px;
+            border-radius: 30px;
         }
 
         .button-call-to-action:hover {
@@ -104,31 +107,23 @@
             color: #BC2224;
         }
 
-        /* Love section */
-        .why-i-love {
-            overflow: hidden;
-            padding: 20px;
-            border-radius: 20px;
-            display: flex;
-        }
-
-        .book-show-left,
-        .book-show-right,
-        .love-left,
-        .love-right,
-        .love-left,
-        .love-right {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        /* Love section*/
+        .text-about,
+        .text-love {
+            color: #471A1B;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .love-right {
             background-color: #BF4A38;
             border-radius: 20px;
-            padding: 5%;
+        }
+
+        .love-left,
+        .love-right {
+            padding: 3%;
         }
 
         .title-love {
@@ -140,12 +135,10 @@
         }
 
         /* About section*/
-        .book-about {
+        .about-section {
             background-color: #FDF1DB;
             overflow: hidden;
-            padding: 20px;
             border-radius: 20px;
-            padding: 5%;
         }
 
         .title-about {
@@ -165,22 +158,10 @@
         }
 
         /* Ratings section */
-        .book-ratings {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
 
-        .card {
+        .rating-card {
             width: 100%;
-            height: 300px;
-            border-radius: 30px;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='500' height='300' preserveAspectRatio='none' viewBox='0 0 500 300'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1064%26quot%3b)' fill='none'%3e%3crect width='500' height='300' x='0' y='0' fill='rgba(213%2c 188%2c 164%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c138 C 33.4%2c114.2 100.2%2c24.2 167%2c19 C 233.8%2c13.8 267.4%2c112.2 334%2c112 C 400.6%2c111.8 466.8%2c36.8 500%2c18L500 300L0 300z' fill='rgba(253%2c 241%2c 219%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c253 C 50%2c242.4 150%2c194 250%2c200 C 350%2c206 450%2c266.4 500%2c283L500 300L0 300z' fill='rgba(225%2c 214%2c 194%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1064'%3e%3crect width='500' height='300' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='500' height='400' preserveAspectRatio='none' viewBox='0 0 500 300'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1064%26quot%3b)' fill='none'%3e%3crect width='500' height='300' x='0' y='0' fill='rgba(213%2c 188%2c 164%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c138 C 33.4%2c114.2 100.2%2c24.2 167%2c19 C 233.8%2c13.8 267.4%2c112.2 334%2c112 C 400.6%2c111.8 466.8%2c36.8 500%2c18L500 300L0 300z' fill='rgba(253%2c 241%2c 219%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c253 C 50%2c242.4 150%2c194 250%2c200 C 350%2c206 450%2c266.4 500%2c283L500 300L0 300z' fill='rgba(225%2c 214%2c 194%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1064'%3e%3crect width='500' height='300' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
             padding: 5%;
         }
 
@@ -188,6 +169,8 @@
             background-color: #831719;
             color: #FDF1DB;
             margin-top: 40px;
+            padding: 20px 10px 20px 10px;
+            border-radius: 30px;
         }
 
         .button-card:hover {
@@ -208,83 +191,62 @@
             text-align: center;
         }
 
-        .rating-link {
-            margin-top: 30px;
-            text-decoration: none;
-            color: #D5BCA4;
-            font-size: 20px;
-            text-align: center;
-            cursor: pointer;
-        }
+        /* Author Section */
 
-        /* About Author section */
         .author-section {
-            flex-direction: column-reverse;
-        }
-
-        .about-author {
             background-color: #BF4A38;
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c582.507C107.497%2c577.258%2c171.634%2c462.167%2c248.806%2c387.149C311.304%2c326.395%2c359.39%2c258.738%2c407.698%2c186.189C465.64%2c99.173%2c570.421%2c23.495%2c560.234%2c-80.549C550.089%2c-184.163%2c432.56%2c-237.402%2c359.008%2c-311.082C291.152%2c-379.057%2c240.662%2c-482.123%2c145.608%2c-495.897C50.588%2c-509.666%2c-26.957%2c-425.015%2c-111.356%2c-379.243C-177.662%2c-343.283%2c-245.42%2c-312.445%2c-295.938%2c-256.432C-347.196%2c-199.598%2c-375.397%2c-129.704%2c-401.35%2c-57.705C-433.353%2c31.08%2c-491.212%2c121.678%2c-464.901%2c212.313C-438.08%2c304.704%2c-340.187%2c352.306%2c-264.927%2c412.234C-181.108%2c478.977%2c-107.018%2c587.733%2c0%2c582.507' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 986.802C1512.886 970.309 1581.636 954.371 1647.806 921.796 1721.772 885.383 1814.464 861.1890000000001 1848.598 786.144 1882.73 711.104 1837.142 626.059 1818.885 545.668 1802.13 471.892 1782.114 402.113 1746.254 335.496 1701.601 252.54399999999998 1667.7930000000001 154.99900000000002 1584.696 110.61500000000001 1496.73 63.63099999999997 1386.357 60.325000000000045 1292.1100000000001 92.928 1199.547 124.94900000000001 1137.158 207.43900000000002 1078.362 285.773 1022.967 359.576 977.717 440.174 963.085 531.2860000000001 948.293 623.392 960.732 716.905 995.2049999999999 803.588 1030.926 893.408 1073.252 996.364 1162.658 1033.108 1251.451 1069.601 1347.431 1008.27 1441 986.802' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
             overflow: hidden;
-            padding: 20px;
             border-radius: 20px;
-            display: flex;
         }
 
         .title-author {
             font-family: 'Cinzel', serif;
             color: #D5BCA4;
-            font-size: 40px;
+            font-size: 30px;
             margin-bottom: 40px;
             font-weight: bolder;
         }
 
         .text-author {
-            font-size: 20px;
+            font-size: 15px;
             color: #FDF1DB;
         }
 
-        .author-left,
-        .author-right {
-            padding: 5%;
-        }
-
         .img-author {
-            width: 100%;
+            width: 300px;
             height: auto;
-            /* Maintain aspect ratio */
             border-radius: 50%;
         }
 
-        a {
-            color: #471A1B;
-            font-weight: bolder;
-        }
-
-        a:hover {
-            color: #831719;
-        }
-
-        /* Credits section */
         .credits {
             font-family: 'Roboto Condensed', sans-serif;
             color: #FDF1DB;
             text-align: center;
+        }
+
+        .personal-links {
+            color: #FDF1DB;
+            margin-right: 10px;
+        }
+
+        .personal-links:hover {
+            color: #D5BCA4;
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <section class="section">
-            <div class="book-show">
-                <div class="book-show-left">
+        <section class="container showcase-section">
+            <div class="row gy-5">
+                <div class="col col-sm-12 col-lg-7 showcase-left">
                     <h1>Crescent City: </h1><br>
                     <h2>House of earth and blood.</h2><br>
                     <h3> Winner of the goodreads choice awards 2020!</h3><br>
-                    <button class="button-call-to-action"> Want to learn more? 🙌🏻 ✨</button>
+                    <button type="button" class="btn button-call-to-action"> Want to learn more? 🙌🏻 ✨</button>
                 </div>
-                <div class="book-show-right">
+                <div class="col col-sm-12 col-lg-5 showcase-right" align="center">
                     <img alt="Crescent City Book"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/111/original/81WblhV3ymL._SY522_.jpg?1701818623">
 
@@ -292,8 +254,8 @@
             </div>
         </section>
 
-        <section id="about-section" class="section">
-            <div class="book-about">
+        <section id="about-section" class="container about-section">
+            <div class="row">
                 <p class="title-about">Are you passionate about romance and suspense books? This book is for you!</p>
                 <p class="text-about">
                     Bryce Quinlan had the perfect life-working hard all day and partying all night-until a demon
@@ -320,13 +282,13 @@
             </div>
         </section>
 
-        <section class="section love">
-            <div class="why-i-love">
-                <div class="love-left">
+        <section class="container love-section">
+            <div class="row gy-5">
+                <div class="col col-sm-12 col-lg-6 love-left" align="center">
                     <img alt="Crescent City Book" width="300px"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/154/original/9781639733286_p1_v2_s600x595.jpg?1701881939">
                 </div>
-                <div class="love-right">
+                <div class="col col-sm-12 col-lg-6 love-right">
                     <p class="title-love"> Why do I love this book?</p>
                     <p class="text-love">
                         In a tough chapter of my life, this book found me. I was often feeling low, wasting tons of time
@@ -351,29 +313,35 @@
             </div>
         </section>
 
-        <section class="section">
-            <div class="book-ratings">
-                <div class="card">
-                    <p class="rating"> 4.48 ⭐️ </p>
-                    <p class="rating-subtext">on GoodReads!</p>
-                    <button id="goodreads" class="button-card"> Visit GoodReads</button>
+        <section class="container ratings-section">
+            <div class="row gx-5 gy-5">
+                <div class="col col-sm-12 col-lg-4">
+                    <div class="card rating-card">
+                        <p class="rating"> 4.48 ⭐️ </p>
+                        <p class="rating-subtext">on GoodReads!</p>
+                        <button id="goodreads" class="btn button-card"> Visit GoodReads</button>
+                    </div>
                 </div>
-                <div class="card">
-                    <p class="rating"> 4.31 ⭐️ </p>
-                    <p class="rating-subtext">on LibraryThing!</p>
-                    <button id="library-thing" class="button-card"> Visit LibraryThing</button>
+                <div class="col col-sm-12 col-lg-4">
+                    <div class="card rating-card">
+                        <p class="rating"> 4.31 ⭐️ </p>
+                        <p class="rating-subtext">on LibraryThing!</p>
+                        <button id="library-thing" class="btn button-card"> Visit LibraryThing</button>
+                    </div>
                 </div>
-                <div class="card">
-                    <p class="rating"> 4.7 ⭐️ </p>
-                    <p class="rating-subtext">on Amazon!</p>
-                    <button id="amazon" class="button-card">Visit Amazon</button>
+                <div class="col col-sm-12 col-lg-4">
+                    <div class="card rating-card">
+                        <p class="rating"> 4.7 ⭐️ </p>
+                        <p class="rating-subtext">on Amazon!</p>
+                        <button id="amazon" class="btn button-card">Visit Amazon</button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section author-section">
-            <div class="about-author">
-                <div class="author-left">
+        <section class="container author-section">
+            <div class="row gy-5">
+                <div class="col col-sm-12 col-lg-6 author-left">
                     <p class="title-author">
                         Who is the author?
                     </p>
@@ -388,11 +356,12 @@
                     </p>
                     <br>
                     <p class="text-author">
-                        To find out more, visit <a href="https://sarahjmaas.com/">sarahjmaas.com</a> or follow <a
-                            href="https://www.instagram.com/therealsjmaas/">@therealsjmaas</a> on Instagram.
+                        To find out more, visit <a href="https://sarahjmaas.com/" target="_blank">sarahjmaas.com</a> or
+                        follow <a href="https://www.instagram.com/therealsjmaas/" target="_blank">@therealsjmaas</a> on
+                        Instagram.
                     </p>
                 </div>
-                <div class="author-right">
+                <div class="col col-sm-12 col-lg-6 author-right" align="center">
                     <img class="img-author" alt="Image of author Sarah J. Maas"
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/113/original/Sarah-headshot-color-med.jpg?1701819528">
 
@@ -400,9 +369,28 @@
             </div>
         </section>
 
-        <section class="section credtis-section">
+        <section class="container credits-section">
             <div class="credits">
-                Coded by Jessica Arvizu, with 🧡. Using HTML, CSS & JavaScript
+                <div class="container">
+                    <a class="personal-links" href="https://www.linkedin.com/in/jessica-arvizu/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                        </svg>
+                    </a>
+                    <a class="personal-links" href="https://github.com/jessicaArvizu" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <p>Coded by Jessica Arvizu, with 🧡</p>
+                    <p>Using HTML, CSS, JavaScript & Bootstrap.</p>
+                </div>
             </div>
         </section>
     </div>
