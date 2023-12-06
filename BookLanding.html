@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescent City </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Fauna+One&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        /*
+            Color palette
+            Rosewood: #601111
+            Jasper: #BF4A38
+            Fire brick: #BC2224
+            Black bean: #471A1B
+            Dun: #D5BCA4
+            Papaya Whip: #FDF1DB
+        */
+
+        * {
+            background-color: #471A1B;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            font-family: 'Fauna One', serif;
+        }
+
+        .section {
+            width: 100%;
+            padding: 70px;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .book-show {
+            background-color: #BF4A38;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1441' height='600' preserveAspectRatio='none' viewBox='0 0 1441 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1190%26quot%3b)' fill='none'%3e%3crect width='1441' height='600' x='0' y='0' fill='rgba(191%2c 74%2c 56%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c536.277C100.475%2c536.031%2c186.465%2c475.614%2c274.267%2c426.767C367.962%2c374.642%2c472.096%2c332.392%2c529.386%2c241.763C590.286%2c145.423%2c612.802%2c27.023%2c598.431%2c-86.041C583.934%2c-200.093%2c517.992%2c-297.114%2c449.184%2c-389.22C375.754%2c-487.512%2c304.072%2c-600.15%2c186.982%2c-636.802C69.364%2c-673.619%2c-62.876%2c-642.019%2c-171.317%2c-583.452C-269.757%2c-530.287%2c-320.027%2c-423.928%2c-380.935%2c-330.082C-433.764%2c-248.685%2c-481.502%2c-166.943%2c-503.049%2c-72.327C-526.08%2c28.805%2c-552.038%2c138.083%2c-509.048%2c232.475C-466.046%2c326.894%2c-364.221%2c374.944%2c-275.131%2c428.113C-188.763%2c479.658%2c-100.58%2c536.523%2c0%2c536.277' fill='%23a64031'%3e%3c/path%3e%3cpath d='M1441 1272.163C1564.537 1259.1860000000001 1666.446 1179.9450000000002 1765.761 1105.337 1858.724 1035.501 1944.274 957.521 1997.4679999999998 854.131 2052.41 747.343 2101.064 625.848 2072.467 509.209 2044.524 395.235 1923.632 337.041 1848.576 246.834 1771.525 154.22899999999998 1741.1970000000001 5.211999999999989 1625.42-28.077999999999975 1509.596-61.38099999999997 1400.37 37.51400000000001 1290.155 86.269 1194.656 128.515 1094.2359999999999 161.41699999999997 1023.466 238.20499999999998 951.392 316.407 922.992 419.725 889.732 520.74 849.683 642.376 775.659 764.914 809.37 888.456 844.248 1016.274 955.983 1109.718 1069.217 1178.5059999999999 1180.699 1246.23 1311.273 1285.79 1441 1272.163' fill='%23cb5d4d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1190'%3e%3crect width='1441' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");            overflow: hidden;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .book-show-left,
+        .book-show-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book-show-left {
+            padding: 2%;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        .book-show-call-to-action,
+        .book-show-left,
+        .book-show-right {
+            background-color: transparent;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 73px;
+            color: #D5BCA4;
+        }
+
+        h2 {
+            font-size: 45px;
+            color: #471A1B;
+        }
+
+        h3 {
+            color: #FDF1DB;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            background-color: #471A1B;
+            color: #FDF1DB;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+            padding: 20px 10px 20px 10px;
+        }
+
+        button:hover {
+            background-color: #D5BCA4;
+            color: #BC2224;
+            transition: all 300ms ease-in-out;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .book-ratings {
+            display: grid;
+        }
+
+        .credits {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .card {
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <section class="section show-section">
+            <div class="book-show">
+                <div class="book-show-left">
+                    <h1>Crescent City: </h1><br>
+                    <h2>House of earth and blood.</h2><br>
+                    <h3> Winner of the goodreads choice awards 2020!</h3><br>
+                    <div class="book-show-call-to-action">
+                        <button> Learn more 👋🏻 </button>
+                    </div>
+                </div>
+                <div class="book-show-right">
+                    <img alt="Crescent City Book"
+                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/111/original/81WblhV3ymL._SY522_.jpg?1701818623">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section">
+            <div class="book-about">
+                <p>Are you passionate about romance and suspense books? This book is for you!</p>
+                <p>Featuring memorable characters, passionate romance, and gripping suspense, this imaginative new
+                    fantasy
+                    series from bestselling author Sarah J. Maas explores the pain of loss, the cost of freedom, and the
+                    transformative force of love.</p>
+            </div>
+        </section>
+
+        <section class="section ratings-section">
+            <div class="book-ratings">
+                <div class="card">
+                    <p> 4.48 ⭐️ on GoodReads!</p>
+                    <a
+                        href="https://www.goodreads.com/book/show/44778083-house-of-earth-and-blood?from_search=true&from_srp=true&qid=kbQ1vnBMmm&rank=1">
+                        Visit GoodReads
+                    </a>
+                </div>
+                <div class="card">
+                    <p>4.31 ⭐️ on LibraryThing!</p>
+                    <a href="https://www.librarything.com/work/18366491">Visit LibraryThing</a>
+                </div>
+                <div class="card">
+                    <p>4.7 ⭐️ on Amazon!</p>
+                    <a
+                        href="https://www.amazon.com.mx/House-Earth-Blood-Crescent-City/dp/1635574048/ref=sr_1_1?crid=T36DPHADXCXW&keywords=crescent+city&qid=1701820304&sprefix=crescent+city%2Caps%2C376&sr=8-1&ufe=app_do%3Aamzn1.fos.4e545b5e-1d45-498b-8193-a253464ffa47">Visit
+                        Amazon</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section author-section">
+            <div class="about-author">
+                <p>
+                    Sarah J. Maas is the #1 New York Times and internationally bestselling author of the Crescent City,
+                    A
+                    Court
+                    of Thorns and Roses, and the Throne of Glass series. Her books have sold more than twelve million
+                    copies
+                    and
+                    are published in thirty-seven languages. A New York native, Sarah lives in Philadelphia with her
+                    husband,
+                    son, and dog.
+                </p>
+                <p>
+                    To find out more, visit <a href="https://sarahjmaas.com/">sarahjmaas.com</a> or follow <a
+                        href="https://www.instagram.com/therealsjmaas/">@therealsjmaas</a> on Instagram.
+                </p>
+                <img class="img-author" alt="Image of author Sarah J. Maas"
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/113/original/Sarah-headshot-color-med.jpg?1701819528">
+            </div>
+        </section>
+
+        <div class="credits">
+            Coded by Jessica Arvizu, with 🧡. Using HTML, CSS & JavaScript
+        </div>
+    </div>
+</body>
+
+</html>
